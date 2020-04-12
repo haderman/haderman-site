@@ -1,0 +1,17 @@
+.city-container {
+  background: rgb(5,63,94);
+  background: linear-gradient(180deg, rgba(2,44,67,1) 60%, rgba(5,63,94,1) 85%, rgba(17,81,115,1) 100%);
+}
+
+.build { outline: 1px dashed salmon; }
+.build.small { width: 100px; }
+.build.medium { width: 100px; }
+.build.large { width: 100px; }
+
+.roof {
+  background-color: blue;
+}
+
+.red { background-color: lightcoral; }
+.blue { background-color: lightskyblue; }
+.green { background-color: lightseagreen; }

@@ -1,0 +1,185 @@
+body {
+  background-color: #022c43;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.full-width { width: 100%; }
+.full-viewport {
+  width:100vw;
+  height:100vh;
+}
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inline { display: inline-flex; }
+.flex { display: flex; }
+.flex.column { flex-direction: column; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.flex.align-center { align-items: center; }
+.flex.align-stretch { align-items: stretch; }
+.flex.align-baseline { align-items: baseline; }
+
+
+p.align-center,
+h5.align-center,
+h4.align-center,
+h3.align-center,
+h2.align-center,
+h1.align-center,
+span.align-center { text-align: center; }
+
+
+.color-white { color: white; }
+.background-white { background-color: white; }
+.opaque { opacity: 0.7 ;}
+
+
+/*
+
+UNIVERSE
+
+*/
+.universe-container {
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 56%, rgba(1,27,41,1) 80%, rgba(2,44,67,1) 100%);
+}
+
+/* stars */
+.star {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 2px;
+  height: 2px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* `planets */
+svg polyline,
+svg line,
+svg path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 0.2s;
+}
+
+svg circle {
+  fill: #18DCFF;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.planet {
+  position: absolute;
+}
+
+.planet.small {
+  width: 80px;
+  height: 80px;
+}
+
+.planet.medium {
+  width: 140px;
+  height: 140px;
+}
+
+.planet.large {
+  width: 200px;
+  height: 200px;
+}
+
+.planet circle {
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.planet polygon {
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.planet-A {
+  -webkit-filter: drop-shadow(0 0 0.75rem cyan);
+  filter: drop-shadow(0 0 0.75rem cyan);
+}
+
+.planet-A circle {
+  fill: #18DCFF;
+}
+
+.planet-A polygon {
+  fill: #3AEA74;
+}
+
+.planet-B {
+  -webkit-filter: drop-shadow(0 0 0.75rem red);
+  filter: drop-shadow(0 0 0.75rem red);
+}
+
+.planet-B circle {
+  fill: #FFA502;
+}
+
+.planet-B polygon {
+  fill: #FF6348;
+}
+
+.planet-C {
+  -webkit-filter: drop-shadow(0 0 0.75rem purple);
+  filter: drop-shadow(0 0 0.75rem purple);
+}
+
+.planet-C circle {
+  fill: #0a3d62;
+}
+
+.planet-C polygon {
+  fill: #0a3d62;
+}
+
+.planet-D {
+  -webkit-filter: drop-shadow(0 0 0.75rem green);
+  filter: drop-shadow(0 0 0.75rem green);
+}
+
+.planet-D circle {
+  fill: #4a69bd;
+}
+
+.planet-D polygon {
+  fill: #6a89cc;
+}
+
+
