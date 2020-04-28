@@ -2,10 +2,11 @@ import React from "react";
 
 import Stars from "./stars";
 import Planet from "./planet";
+import "../styles/universe.css";
 
 function Universe() {
   return (
-    <section className="full-viewport universe-container flex justify-center align-center">
+    <section className="relative full-viewport universe-container flex justify-center align-center">
       <Stars />
       <Planet
         color="A"
@@ -25,8 +26,8 @@ function Universe() {
         color="D"
         pattern="A"
         size="large"
-        posX="86%"
-        posY="-8%"
+        posX="80%"
+        posY="0%"
       />
     </section>
   )

@@ -1,0 +1,7 @@
+#grass {
+  --grass-hue: 130;
+  width: 100%;
+  height: var(--one-m);
+  background-color: hsl(var(--grass-hue), var(--saturation), var(--lightness));
+  border-bottom: calc(var(--one-m) / 3) solid hsl(var(--grass-hue), var(--saturation), calc(var(--lightness) / 2));
+}

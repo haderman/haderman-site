@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import PropTypes from "prop-types";
 
 Stars.propTypes = {
@@ -12,9 +12,9 @@ Stars.defaultProps = {
 };
 
 function Stars({ sizes }) {
-  const [stars, setStars] = useState([]);
+  const [stars, setStars] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setStars(
       Array
         .from(new Array(100))
@@ -25,7 +25,7 @@ function Stars({ sizes }) {
         }))
         .filter(star => star.size !== "large" || star.posY < 70)
     );
-  }, []);
+  }, [sizes]);
 
   return (
     <div className="sky">

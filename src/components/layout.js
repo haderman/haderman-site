@@ -7,24 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import "../styles/layout.css";
+import "../styles/base.css";
 
 function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <div>
-      <main>{children}</main>
+      <main className="relative">{children}</main>
     </div>
   )
 }
