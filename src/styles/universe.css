@@ -4,8 +4,7 @@ UNIVERSE
 
 */
 .universe-container {
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 56%, rgba(1,27,41,1) 80%, rgba(2,44,67,1) 100%);
+  background-color: hsl(0, 0%, 2%);
 }
 
 /* stars */
@@ -43,9 +42,9 @@ UNIVERSE
 }
 
 /* `planets */
-svg polyline,
-svg line,
-svg path {
+.universe-container .planet svg polyline,
+.universe-container .planet svg line,
+.universe-container .planet svg path {
   fill: none;
   stroke: #000;
   stroke-width: 0.2px;
@@ -54,14 +53,15 @@ svg path {
   transition: 0.2s;
 }
 
-svg circle {
-  fill: #18DCFF;
+.universe-container .planet svg circle {
   stroke: black;
-  stroke-width: 1px;
+  stroke-width: 2px;
 }
 
 .planet {
   position: absolute;
+  /* -webkit-filter: drop-shadow(0 0 0.75rem red);
+  filter: drop-shadow(0 0 0.75rem red); */
 }
 
 .planet.small {
@@ -79,66 +79,15 @@ svg circle {
   height: 200px;
 }
 
-.planet circle {
-  stroke: black;
+.universe-container .planet svg circle {
+  fill: hsl(217, 5%, 2%);
+  stroke: hsl(210, 6%, 49%);
   stroke-width: 1px;
 }
 
-.planet polygon {
-  stroke: black;
+.universe-container .planet svg polygon {
+  stroke: hsl(210, 6%, 49%);
   stroke-width: 1px;
+  fill: hsl(0, 0%, 5%);
 }
-
-.planet-A {
-  -webkit-filter: drop-shadow(0 0 0.75rem cyan);
-  filter: drop-shadow(0 0 0.75rem cyan);
-}
-
-.planet-A circle {
-  fill: #18DCFF;
-}
-
-.planet-A polygon {
-  fill: #3AEA74;
-}
-
-.planet-B {
-  -webkit-filter: drop-shadow(0 0 0.75rem red);
-  filter: drop-shadow(0 0 0.75rem red);
-}
-
-.planet-B circle {
-  fill: #FFA502;
-}
-
-.planet-B polygon {
-  fill: #FF6348;
-}
-
-.planet-C {
-  -webkit-filter: drop-shadow(0 0 0.75rem purple);
-  filter: drop-shadow(0 0 0.75rem purple);
-}
-
-.planet-C circle {
-  fill: #0a3d62;
-}
-
-.planet-C polygon {
-  fill: #0a3d62;
-}
-
-.planet-D {
-  -webkit-filter: drop-shadow(0 0 0.75rem green);
-  filter: drop-shadow(0 0 0.75rem green);
-}
-
-.planet-D circle {
-  fill: #4a69bd;
-}
-
-.planet-D polygon {
-  fill: #6a89cc;
-}
-
 

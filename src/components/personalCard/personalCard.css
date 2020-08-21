@@ -1,0 +1,58 @@
+
+/* Personal card */
+.personal-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  width: fit-content;
+}
+
+.personal-card > h1 {
+  color: hsl(0, 0%, 95%);
+  font-size: var(--size-xl);
+}
+
+.personal-card > h2 {
+  color: hsl(200, 51%, 66%);
+  font-weight: 100;
+}
+
+.personal-card > ul { display: inline-flex; }
+.personal-card > ul > li { margin-right: 1rem; }
+.personal-card > ul > li:last-child { margin-right: 0; }
+
+.personal-card > ul a {
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 1px solid hsl(200, 10%, 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-card > ul a:hover {
+  background-color: hsl(200, 0%, 10%);
+  transition: background-color;
+}
+
+.personal-card svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1;
+  stroke: hsl(200, 10%, 40%);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.personal-card > * {
+  margin-bottom: 1rem;
+}
+.personal-card > *:last-child {
+  margin-bottom: 0;
+}
+
+

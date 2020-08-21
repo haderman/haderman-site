@@ -1,4 +1,3 @@
 #city {
-  background: rgb(2,44,67);
-  background: linear-gradient(180deg, rgba(2,44,67,1) 7%, rgba(182,223,231,1) 100%);
+  background-color: hsl(0, 0%, 2%);
 }

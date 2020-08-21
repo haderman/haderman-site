@@ -7,10 +7,9 @@ import Grass from "./grass";
 
 function City() {
   return (
-    <section id="city" className="relative full-viewport city-container flex column align-center justify-end">
+    <section id="city" className="relative city-container flex column align-center justify-end">
       <Buildings />
-      <Street />
-      <Grass />
+      {/* <Street /> */}
     </section>
   );
 }

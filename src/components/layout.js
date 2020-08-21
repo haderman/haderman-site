@@ -7,13 +7,19 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Universe from "./universe"
+import City from "./city"
 
 import "../styles/base.css";
 
 function Layout({ children }) {
   return (
-    <div>
-      <main className="relative">{children}</main>
+    <div className="layout">
+      {/* <div className="absolute full-width full-height">
+        <Universe />
+        <City />
+      </div> */}
+      <main className="stack:xl relative inset:m">{children}</main>
     </div>
   )
 }
