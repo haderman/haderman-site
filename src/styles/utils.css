@@ -34,7 +34,7 @@ html {
 
 @media only screen and (max-width: 600px) {
   html {
-    --ratio: 1.618;
+    --ratio: 1.5;
   }
 }
 
@@ -69,11 +69,11 @@ body {
 
 main {
   overflow: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 main::-webkit-scrollbar {
@@ -91,6 +91,9 @@ main::-webkit-scrollbar {
 ul {
   list-style: none;
 }
+
+h1 { font-size: var(--size-l); }
+h2 { font-size: var(--size-m); }
 
 [class^="inline"] {
   display: inline-flex;
@@ -143,6 +146,9 @@ ul {
 
 .w-full { width: 100%; }
 .w-screen { width: 100vw; }
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.h-min-screen { min-height: 100vh; }
 
 .rounded-none { border-radius: 0; }
 .rounded-sm { border-radius: 0.125rem; }
@@ -167,6 +173,7 @@ ul {
 
 .relative { position: relative; }
 .absolute { position: absolute; }
+.fixed { position: fixed; }
 .inline { display: inline-flex; }
 .inline.gutter-s { margin-right: 16px; }
 .inline.gutter-m { margin-right: 32px; }
@@ -177,6 +184,7 @@ ul {
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
 .justify-space-around { justify-content: space-around; }
+.justify-space-between { justify-content: space-between; }
 .flex.align-center { align-items: center; }
 .flex.align-stretch { align-items: stretch; }
 .flex.align-end { align-items: flex-end; }
@@ -209,3 +217,9 @@ span.align-center { text-align: center; }
 svg {
   stroke-width: 1px;
 }
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+

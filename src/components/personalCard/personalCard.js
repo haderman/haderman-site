@@ -8,7 +8,7 @@ import "./personalCard.css"
 
 function PersonalCard() {
   return (
-    <article className="personal-card">
+    <article className="personal-card inset:s">
       <h1>Hader Cardona</h1>
       <h2>Front-End Developer</h2>
       <ul>

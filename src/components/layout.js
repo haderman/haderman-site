@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import Universe from "./universe"
 import City from "./city"
 
-import "../styles/base.css";
+import "../styles/utils.css";
+import "../styles/site.css";
 
 function Layout({ children }) {
   return (
@@ -19,7 +20,7 @@ function Layout({ children }) {
         <Universe />
         <City />
       </div> */}
-      <main className="stack:xl relative inset:m">{children}</main>
+      <main className="stack:m relative">{children}</main>
     </div>
   )
 }

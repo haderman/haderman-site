@@ -2,79 +2,84 @@ import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Img from "gatsby-image";
 import SEO from "../components/seo"
-import PersonalCard from "../components/personalCard/personalCard"
+import GithubIcon from "../assets/brand-github.svg"
+import MailIcon from "../assets/mail.svg"
+import FileTextIcon from "../assets/file-text.svg"
+import TwitterIcon from "../assets/brand-twitter.svg"
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            skills
-            description
-          }
-          fields {
-            slug
-          }
+    profilePhoto: file(relativePath: { eq: "profile-photo.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
-`
+`;
 
-function IndexPage({ data }) {
+export default function IndexPage({ data }) {
   return (
-    <Layout>
-      <SEO title="Home" />
-      <PersonalCard />
-      <ProjectsContainer>
-        {data.allMarkdownRemark.edges.map(({ node }) =>
-          <AniLink key={node.id} paintDrip to={"projects" + node.fields.slug} duration={0.5} hex="#0e0f0f">
-            <Project
-              name={node.frontmatter.title}
-              description={node.frontmatter.description}
-              tags={node.frontmatter.skills}
-            />
+    <div className="flex column h-min-screen">
+      <header className="inset:m">
+        <nav className="flex justify-end">
+          <AniLink cover to="/projects" hex="#0e0f0f">
+            <span>Projects</span>
           </AniLink>
-        )}
-      </ProjectsContainer>
-    </Layout>
-  )
-}
+        </nav>
+      </header>
+      <main className="flex-1 justify-space-between">
+        <SEO title="Home" />
+        <Greeting />
+        <div className="w-full relative">
+          <Img
+            fluid={data.profilePhoto.childImageSharp.fluid}
+            alt="Profile photo"
+          />
+        </div>
+        <SocialLinks />
+      </main>
+    </div>
+  );
+};
 
-function ProjectsContainer({ children }) {
+function Greeting() {
   return (
-    <section className="stack:m w-full max-w-screen-sm">
-      <h2>Side Projects</h2>
-      {children}
-    </section>
+    <h1 className="inset:m greeting">
+      Hi, I'm
+      <span> Hader Cardona </span>
+      and I am
+      <span> Front-End Developer</span>
+    </h1>
   )
 }
 
-function Project({ name, description, tags }) {
+function SocialLinks() {
   return (
-    <article className="stack:s inset:m border:s border-color:gray rounded">
-      <h4>{name}</h4>
-      <p>{description}</p>
-      <div className="inline:s">
-        {tags.map(text =>
-          <Tag key={text} text={text} />
-        )}
-      </div>
-    </article>
-  )
-}
-
-function Tag({ text }) {
-  return (
-    <span className="inset:xs border:s border-color:gray rounded-md">
-      {text}
-    </span>
-  )
-}
-
-export default IndexPage
+    <ul className="inline:l inset:l w-full fixed social-buttons-list">
+      <li>
+        <a href="https://github.com/haderman" target="_blank">
+          <GithubIcon />
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/haderman7" target="_blank">
+          <TwitterIcon />
+        </a>
+      </li>
+      <li>
+        <a>
+          <FileTextIcon />
+        </a>
+      </li>
+      <li>
+        <a>
+          <MailIcon />
+        </a>
+      </li>
+    </ul>
+  );
+};

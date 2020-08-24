@@ -1,0 +1,29 @@
+nav span {
+  border-bottom: 2px solid hsl(200, 50%, 50%);
+}
+
+.greeting span {
+  color: hsl(200, 50%, 50%)
+}
+
+ul.social-buttons-list {
+  display: inline-flex;
+  bottom: 0;
+  justify-content: center;
+}
+
+ul.social-buttons-list a {
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 4px solid hsl(200, 40%, 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(200, 0%, 10%);
+  box-shadow: 1px 3px 6px 0px black;
+}
+
+ul.social-buttons-list a:hover {
+  background-color: hsl(200, 0%, 10%);
+  transition: background-color;
+}
