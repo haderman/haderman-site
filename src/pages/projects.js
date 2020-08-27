@@ -14,8 +14,8 @@ export const query = graphql`
           frontmatter {
             title
             skills
-            description
           }
+          excerpt
           fields {
             slug
           }
@@ -27,44 +27,36 @@ export const query = graphql`
 
 export default function Projects({ data }) {
   return (
-    <div className="stack:l inset:m">
+    <div className="stack: squish-inset:m">
       <SEO title="Home" />
       <header className="inline:m">
-        <AniLink cover to="/" hex="#0e0f0f">
-          <ArrowLeftIcon />
+        <AniLink cover to="/" bg="#0e0f0f">
+          <span className="flex justify-center align-center inset:s rounded-full">
+            <ArrowLeftIcon />
+          </span>
         </AniLink>
         <h1>Projects</h1>
       </header>
-      <ProjectsContainer>
+      <section className="stack:xl squish-inset:m w-full max-w-screen-sm">
         {data.allMarkdownRemark.edges.map(({ node }) =>
           <AniLink key={node.id} paintDrip to={node.fields.slug} duration={0.5} hex="#0e0f0f">
             <Project
               name={node.frontmatter.title}
-              description={node.frontmatter.description}
+              description={node.excerpt}
               tags={node.frontmatter.skills}
             />
           </AniLink>
         )}
-      </ProjectsContainer>
+      </section>
     </div>
   )
 }
 
-
-function ProjectsContainer({ children }) {
-  return (
-    <section className="stack:m w-full max-w-screen-sm">
-      <h2>Side Projects</h2>
-      {children}
-    </section>
-  );
-};
-
 function Project({ name, description, tags }) {
   return (
-    <article className="stack:s inset:m border:s border-color:gray rounded">
+    <article className="stack:s inset:m border:xl bg:secondary border-color:accent rounded:xl shadow-inset">
       <h4>{name}</h4>
-      <p>{description}</p>
+      <p className="color:gray-neutral two-lines">{description}</p>
       <div className="inline:s">
         {tags.map(text =>
           <Tag key={text} text={text} />
@@ -76,7 +68,7 @@ function Project({ name, description, tags }) {
 
 function Tag({ text }) {
   return (
-    <span className="inset:xs border:s border-color:gray rounded-md">
+    <span className="squish-inset:xs bg:tertiary rounded:m">
       {text}
     </span>
   );

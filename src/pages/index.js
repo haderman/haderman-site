@@ -23,11 +23,11 @@ export const query = graphql`
 
 export default function IndexPage({ data }) {
   return (
-    <div className="flex column h-min-screen">
+    <div className="stack:m flex column h-min-screen">
       <header className="inset:m">
         <nav className="flex justify-end">
-          <AniLink cover to="/projects" hex="#0e0f0f">
-            <span>Projects</span>
+          <AniLink cover to="/projects" bg="#0e0f0f">
+            <span className="inset:xs">My Projects</span>
           </AniLink>
         </nav>
       </header>
@@ -48,18 +48,16 @@ export default function IndexPage({ data }) {
 
 function Greeting() {
   return (
-    <h1 className="inset:m greeting">
-      Hi, I'm
-      <span> Hader Cardona </span>
-      and I am
-      <span> Front-End Developer</span>
+    <h1 className="inset:m greeting text-center">
+      Hi, I'm <span> Hader Cardona </span> and
+      I'm <span> Front-End Developer</span>
     </h1>
   )
 }
 
 function SocialLinks() {
   return (
-    <ul className="inline:l inset:l w-full fixed social-buttons-list">
+    <ul className="inline:xl inset:l w-full fixed social-buttons-list">
       <li>
         <a href="https://github.com/haderman" target="_blank">
           <GithubIcon />
@@ -76,7 +74,7 @@ function SocialLinks() {
         </a>
       </li>
       <li>
-        <a>
+        <a href="mailto:cardona.hader@gmail.com">
           <MailIcon />
         </a>
       </li>

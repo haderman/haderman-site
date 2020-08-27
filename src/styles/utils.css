@@ -3,33 +3,16 @@ html {
 
   --size-xs: calc(var(--size-s) / var(--ratio));
   --size-s: calc(var(--size-m) / var(--ratio));
-  --size-m: 1rem;
+  --size-m: 0.8rem;
   --size-l: calc(var(--size-m) * var(--ratio));
   --size-xl: calc(var(--size-l) * var(--ratio));
 
-  --color-primary: hsl(0, 0%, 90%);
-
-  --unit-palette: calc(360 / 26);
-  --saturation: 47%;
-  --lightness: 50%;
-  --hue-primary: 30;
-  --hue-secondary: 60;
-  --hue-primary-complement: calc(var(--hue-primary) + 180);
-  --hue-secondary-complement: calc(var(--hue-secondary) + 180);
-  --color-primary-complement: hsl(var(--hue-primary-complement), var(--saturation), var(--lightness));
-  --color-secondary: hsl(var(--hue-secondary), var(--saturation), var(--lightness));
-  --color-secondary-complement: hsl(var(--hue-secondary-complement), var(--saturation), var(--lightness));
-  --black: hsl(0, 0%, 0%);
-  --gray-10: hsl(0, 0%, 10%);
-  --gray-20: hsl(0, 0%, 20%);
-  --gray-30: hsl(0, 0%, 30%);
-  --gray-40: hsl(0, 0%, 40%);
-  --gray-50: hsl(0, 0%, 50%);
-  --gray-60: hsl(0, 0%, 60%);
-  --gray-70: hsl(0, 0%, 70%);
-  --gray-80: hsl(0, 0%, 80%);
-  --gray-90: hsl(0, 0%, 90%);
-  --white: hsl(0, 0%, 100%);
+  --color-primary: hsl(180, 4%, 5%);
+  --color-secondary: hsl(200, 0%, 10%);
+  --color-tertiary: hsl(200, 28%, 20%);
+  --color-accent: hsl(200, 40%, 40%);
+  --gray-light: hsl(0, 0%, 85%);
+  --gray-neutral: hsl(0, 0%, 68%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -38,33 +21,12 @@ html {
   }
 }
 
-.cool-palette {
-  --hue-primary: 160;
-  --hue-secondary: calc(var(--unit-palette) * 4);
-  --hue-primary-complement: calc(var(--hue-primary) + 180);
-  --hue-secondary-complement: calc(var(--hue-secondary) + 180);
-}
-
-.palette-1 {
-  --hue-primary: 207;
-  --hue-secondary: 180;
-  --hue-primary-complement: calc(var(--hue-primary) + 180);
-  --hue-secondary-complement: calc(var(--hue-secondary) + 180);
-}
-
-.palette-2 {
-  --hue-primary: 45;
-  --hue-secondary: 125;
-  --hue-primary-complement: calc(var(--hue-primary) + 180);
-  --hue-secondary-complement: calc(var(--hue-secondary) + 180);
-}
-
 body {
   background-color: hsl(190, 5%, 5%);
   margin: 0;
   font-family: sans-serif;
   font-weight: 100;
-  color: var(--color-primary);
+  color: var(--gray-light);
 }
 
 main {
@@ -137,7 +99,30 @@ h2 { font-size: var(--size-m); }
 .border\:s { border: 1px solid; }
 .border\:m { border: 2px solid; }
 .border\:l { border: 3px solid; }
+.border\:xl { border: 4px solid; }
 .border-color\:gray { border-color: gray }
+.border-color\:primary { border-color: var(--color-primary); }
+.border-color\:secondary { border-color: var(--color-secondary); }
+.border-color\:accent { border-color: var(--color-accent); }
+
+.rounded-none { border-radius: 0; }
+.rounded\:s { border-radius: 0.125rem; }
+.rounded\:m { border-radius: 0.25rem; }
+.rounded\:l { border-radius: 0.375rem; }
+.rounded\:xl { border-radius: 0.5rem; }
+.rounded-full { border-radius: 50%; }
+
+.bg\:primary { background-color: var(--color-primary); }
+.bg\:secondary { background-color: var(--color-secondary); }
+.bg\:tertiary { background-color: var(--color-tertiary); }
+.bg\:accent { background-clip: var(--color-accent); }
+.color\:primary { color: var(--color-primary); }
+.color\:secondary { color: var(--color-secondary); }
+.color\:tertiary { color: var(--color-tertiary); }
+.color\:gray-light { color: var(--gray-light); }
+.color\:gray-neutral { color: var(--gray-neutral); }
+
+.text-center { text-align: center; }
 
 .max-w-screen-sm { max-width: 640px; }
 .max-w-screen-md { max-width: 768px; }
@@ -150,19 +135,13 @@ h2 { font-size: var(--size-m); }
 .h-screen { height: 100vh; }
 .h-min-screen { min-height: 100vh; }
 
-.rounded-none { border-radius: 0; }
-.rounded-sm { border-radius: 0.125rem; }
-.rounded { border-radius: 0.25rem; }
-.rounded-md { border-radius: 0.375rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.rounded-full { border-radius: 50%; }
-
 .gap\:xs { gap: var(--size-xs) }
 .gap\:s { gap: var(--size-s) }
 .gap\:m { gap: var(--size-m) }
 .gap\:l { gap: var(--size-l) }
 .gap\:xl { gap: var(--size-xl) }
 
+.shadow-inset { box-shadow: inset 1px 1px 2px 1px black; }
 
 .full-width { width: 100%; }
 .full-viewport {
@@ -198,15 +177,6 @@ h3.align-center,
 h2.align-center,
 h1.align-center,
 span.align-center { text-align: center; }
-
-
-.color-white { color: white; }
-.background-white { background-color: white; }
-.opaque { opacity: 0.7 ;}
-
-.color-primary {
-  color: var(--color-primary)
-}
 
 
 .layout {
