@@ -103,7 +103,9 @@ h2 { font-size: var(--size-m); }
 .border-color\:gray { border-color: gray }
 .border-color\:primary { border-color: var(--color-primary); }
 .border-color\:secondary { border-color: var(--color-secondary); }
+.border-color\:tertiary { border-color: var(--color-tertiary); }
 .border-color\:accent { border-color: var(--color-accent); }
+.border-color\:gray-neutral { border-color: var(--gray-neutral); }
 
 .rounded-none { border-radius: 0; }
 .rounded\:s { border-radius: 0.125rem; }
@@ -123,12 +125,17 @@ h2 { font-size: var(--size-m); }
 .color\:gray-neutral { color: var(--gray-neutral); }
 
 .text-center { text-align: center; }
+.text\:xs { font-size: var(--size-xs); }
+.text\:s { font-size: var(--size-s); }
+.text\:m { font-size: var(--size-m); }
+.text\:l { font-size: var(--size-l); }
+.text\:xl { font-size: var(--size-xl); }
 
 .max-w-screen-sm { max-width: 640px; }
 .max-w-screen-md { max-width: 768px; }
 .max-w-screen-lg { max-width: 1024px; }
 .max-w-screen-xl { max-width: 2180px; }
-
+.max-w-400 { max-width: 400px; }
 .w-full { width: 100%; }
 .w-screen { width: 100vw; }
 .h-full { height: 100%; }
@@ -179,11 +186,6 @@ h1.align-center,
 span.align-center { text-align: center; }
 
 
-.layout {
-  position: relative;
-  min-height: 100vh;
-}
-
 svg {
   stroke-width: 1px;
 }
@@ -193,3 +195,4 @@ svg {
   bottom: 0;
 }
 
+.overflow\:hidden { overflow: hidden; }

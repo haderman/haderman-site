@@ -1,3 +1,51 @@
+#greeting { grid-area: greeting; }
+#image { grid-area: image; }
+#social-links { grid-area: social; }
+#projects { grid-area: projects; }
+
+#projects { display: none; }
+
+@media screen and (min-width: 800px) {
+  .layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 400px 1fr 1fr;
+    grid-template-areas:
+      "greeting projects projects"
+      "social projects projects"
+      "image projects projects"
+  }
+
+  .layout > h1 {
+    padding: var(--size-l);
+    font-size: var(--size-xl);
+  }
+
+  #projects {
+    grid-area: projects;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+
+
+  ul.social-buttons-list { position: relative; }
+
+  header { display: none; }
+
+
+}
+
+.desktop-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--size-xl);
+  gap: var(--size-xl);
+}
+
 nav span {
   border-bottom: 3px solid hsl(200, 50%, 50%);
   font-weight: 600;
