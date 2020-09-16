@@ -52,11 +52,13 @@ export default function Cv({ data }) {
         <article>
           <h1>PROFILE</h1>
           <p>
-            I'm a Front End Developer, I am very adaptative to different ways to work because
-            I think the most important thing is to learn the basics very well and figure out what is the best approach
-            for the team and the product. That's why in my side projects I try to use fewer libraries possible and try
-            to understand how things work. I really love what I do and that's why I am learning always and one of my professional
-            dreams is to have a personal product in Product Hunt
+            I’m a Front End Developer and I am very adaptive to different ways of working.
+            I believe that the most important thing is to learn the basics very well and
+            determine the best approach for the team and the product overall. This is why
+            in my side projects I try to use fewer libraries as possible and understand
+            how things work fundamentally. I really love what I do and am continuously
+            learning and developing my skills. One of my professional goals is to have a personal
+            product in Product Hunt.
           </p>
           <h1>SKILLS</h1>
           <ul className="skill-list">
@@ -100,7 +102,7 @@ export default function Cv({ data }) {
           <li className="cv-side-project-item cv-border-top-green">
             <h2>COVID-19 Tracker</h2>
             <p>
-              Dashboard to see the Covid-19 stats
+              Dashboard to monitor the covid 19 stats
             </p>
             <p className="cv-project-skills">
               <h3>Skills: </h3>
@@ -153,10 +155,10 @@ export default function Cv({ data }) {
               <article className="cv-experience-item">
                 <h4>2015 - 2016</h4>
                 <p>
-                  Unity Develiper Junior at <strong>Brainz.</strong> (Medellín, Colombia)
+                  Unity Developer Junior at <strong>Brainz.</strong> (Medellín, Colombia)
                 </p>
                 <p>
-                  I helped to develop some components to the UI of the game like the store, modals and rewards
+                  I helped to develop several components of the ui of the game including the store, modals and rewards
                 </p>
               </article>
             </li>
@@ -175,12 +177,12 @@ export default function Cv({ data }) {
               <article className="cv-experience-item">
                 <h4>2016 - 2018</h4>
                 <p>
-                  Front End Develiper at <strong>Firebase S.A.S</strong> (Medellín, Colombia / Remote)
+                  Front End Developer at <strong>Firebase S.A.S</strong> (Medellín, Colombia / Remote)
                 </p>
                 <ul>
-                  <li>I built the whole front end for a web app using react and redux</li>
-                  <li>I build an Electron web app using react and redux</li>
-                  <li>I build the the whole front end for the web app of https://www.lobbieapp.com/</li>
+                  <li>I built the entire front end for a web app using react and redux.</li>
+                  <li>I built an electron web app using react and redux.</li>
+                  <li>I built the entire front end for the web app of https://www.lobbieapp.com/</li>
                 </ul>
               </article>
             </li>
@@ -188,7 +190,7 @@ export default function Cv({ data }) {
               <article className="cv-experience-item">
                 <h4>2019</h4>
                 <p>
-                  Traveling and working as volunter in different hostels in Ecuador and Peru to learn english
+                  I travelled and worked as a volunteer in different hostels in Ecuador and Peru to learn English
                 </p>
               </article>
             </li>
